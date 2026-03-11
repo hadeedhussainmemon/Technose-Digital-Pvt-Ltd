@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -26,7 +26,8 @@ export async function GET(req: Request) {
       >
         <div
           style={{
-            display: "inline-flex",
+            display: "flex",
+            alignSelf: "flex-start",
             border: "1px solid #334155",
             borderRadius: "999px",
             padding: "10px 22px",
