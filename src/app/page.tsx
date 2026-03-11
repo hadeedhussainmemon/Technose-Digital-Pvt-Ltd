@@ -1,0 +1,101 @@
+"use client";
+
+import Navbar from "@/components/navbar";
+import SliderOne from "@/components/ui/slider";
+import { Spotlight } from "@/components/ui/spotlight";
+import Link from "next/link";
+import WebsiteDesign from "./website-design";
+import GraphicDesign from "./graphic-design";
+import ShopifyStores from "./shopify-stores";
+import Brands from "./brands";
+import Services from "./services";
+import { useRef } from "react";
+import FAQS from "./faq";
+import Stats from "./stats";
+
+export default function Home() {
+  const websiteDesignRef = useRef<HTMLDivElement>(null);
+  const graphicDesignRef = useRef<HTMLDivElement>(null);
+  const shopifyStoresRef = useRef<HTMLDivElement>(null);
+  const brandsRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+
+  const scrollToWebsiteDesign = () => {
+    websiteDesignRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+
+  const scrollToGraphicDesign = () => {
+    graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToShopifyStores = () => {
+    shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToBrands = () => {
+    brandsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Function to scroll to Services section
+  const scrollToServices = () => {
+    servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  return (
+    <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <Navbar
+        scrollToWebsiteDesign={scrollToWebsiteDesign}
+        scrollToGraphicDesign={scrollToGraphicDesign}
+        scrollToShopifyStores={scrollToShopifyStores}
+        scrollToBrands={scrollToBrands}
+        scrollToServices={scrollToServices}
+      />
+
+      <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
+      <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+        <div className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
+          Build authority online. <br /> Scale revenue with confidence.
+        </div>
+        <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
+          Technose Digital Pvt Ltd crafts high-performing websites, standout
+          brand identities, and growth campaigns tailored to your business
+          goals.
+        </p>
+
+        <div className="flex items-center justify-center gap-4 flex-wrap my-6">
+          <Link
+            href="/contact"
+            className="cursor-pointer flex items-center justify-center border rounded-full px-6 py-2 text-white bg-gradient-to-r from-cyan-500 to-emerald-400 border-transparent font-medium hover:opacity-90 transition-opacity"
+          >
+            Start a Project
+          </Link>
+
+        </div>
+
+        <div className="w-full pt-20">
+          <SliderOne />
+        </div>
+        <Stats />
+        <div ref={websiteDesignRef}>
+          <WebsiteDesign />
+        </div>
+        <div ref={graphicDesignRef}>
+          <GraphicDesign />
+        </div>
+        <div ref={shopifyStoresRef}>
+          <ShopifyStores />
+        </div>
+        <div ref={brandsRef}>
+          <Brands />
+        </div>
+        <div id="services" ref={servicesRef}>
+          <Services />
+        </div>
+        <FAQS />
+      </div>
+    </div>
+  );
+}
