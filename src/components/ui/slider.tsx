@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 const SliderOne = () => {
   const isMediumScreen = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
+  const slideFrameClass = "relative h-[220px] w-full overflow-hidden rounded-2xl md:h-[320px]";
 
   const settings = {
     arrows: false,
@@ -32,81 +33,76 @@ const SliderOne = () => {
       <Slider {...settings}>
         <>
           <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/business.jpeg"
-              alt="Business website hero preview"
-              width={500}
-              height={500}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="
-                  rounded-2xl
-                      "
-            />
+            <div className={slideFrameClass}>
+              <Image
+                priority
+                src="/images/business.jpeg"
+                alt="Business website hero preview"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </>
 
         <>
           <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/coffe.jpeg"
-              alt="Cafe brand website preview"
-              width={500}
-              height={500}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="
-                  rounded-2xl 
-                      "
-            />
+            <div className={slideFrameClass}>
+              <Image
+                priority
+                src="/images/coffe.jpeg"
+                alt="Cafe brand website preview"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </>
 
         <>
           <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/small-business-3.webp"
-              alt="Small business landing page preview"
-              width={500}
-              height={500}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="
-                  rounded-2xl 
-                      "
-            />
+            <div className={slideFrameClass}>
+              <Image
+                priority
+                src="/images/small-business-3.webp"
+                alt="Small business landing page preview"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </>
 
         <>
           <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/man.jpeg"
-              alt="Personal brand service page preview"
-              width={500}
-              height={500}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="
-                  rounded-2xl 
-                      "
-            />
+            <div className={slideFrameClass}>
+              <Image
+                priority
+                src="/images/man.jpeg"
+                alt="Personal brand service page preview"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </>
 
         <>
           <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/image-business.jpeg"
-              alt="Corporate marketing website preview"
-              width={500}
-              height={500}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="
-                  rounded-2xl 
-                      "
-            />
+            <div className={slideFrameClass}>
+              <Image
+                priority
+                src="/images/image-business.jpeg"
+                alt="Corporate marketing website preview"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </>
       </Slider>
