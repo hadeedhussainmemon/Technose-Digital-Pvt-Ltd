@@ -10,45 +10,45 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
     {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiMonitor className="w-8 h-8 text-blue-600" /></div>,
+        icon : <div className="inline-flex rounded-xl border border-cyan-300/20 bg-cyan-400/10 p-3"><PiMonitor className="h-6 w-6 text-cyan-300" /></div>,
         title: "Website Design",
         description:
-          "We build fully responsive websites that look great on all devices. Our websites are designed to convert visitors into customers.",
+          "Conversion-focused websites with fast load times, clean UX, and responsive layouts that perform across all devices.",
       
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiStorefront className="w-8 h-8 text-blue-600" /></div>,
+        icon : <div className="inline-flex rounded-xl border border-cyan-300/20 bg-cyan-400/10 p-3"><PiStorefront className="h-6 w-6 text-cyan-300" /></div>,
         title: "E-commerce Store",
         description:
-          "From small stores to large online retailers, we have the expertise to build a store that will help you grow your business.",
+          "Scalable Shopify and custom stores built to improve checkout flow, average order value, and repeat purchases.",
        
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiLock className="w-8 h-8 text-blue-600" /></div>,
+        icon : <div className="inline-flex rounded-xl border border-cyan-300/20 bg-cyan-400/10 p-3"><PiLock className="h-6 w-6 text-cyan-300" /></div>,
         title: "Authentication",
         description:
-          "Secure authentication solutions for your website or app. We use the latest technology to keep your data safe.",
+          "Secure authentication and access control implementation with modern standards to protect users and data.",
       
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiMegaphone className="w-8 h-8 text-blue-600" /></div>,
+        icon : <div className="inline-flex rounded-xl border border-cyan-300/20 bg-cyan-400/10 p-3"><PiMegaphone className="h-6 w-6 text-cyan-300" /></div>,
         title: "Social Media",
         description:
-          "We offer social media management and ad creation services. We can help you grow your social media presence and reach new customers.",
+          "Performance-driven social campaigns and content systems designed to increase reach, leads, and brand trust.",
       
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiAppStoreLogo className="w-8 h-8 text-blue-600" /></div>,
+        icon : <div className="inline-flex rounded-xl border border-cyan-300/20 bg-cyan-400/10 p-3"><PiAppStoreLogo className="h-6 w-6 text-cyan-300" /></div>,
         title: "App Development",
         description:
-          "We build custom mobile apps for iOS and Android. Our apps are designed to be user-friendly and performant.",
+          "Custom mobile app development with intuitive interfaces, reliable architecture, and smooth user journeys.",
       
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiHeadsetFill className="w-8 h-8 text-blue-600" /></div>,
+        icon : <div className="inline-flex rounded-xl border border-cyan-300/20 bg-cyan-400/10 p-3"><PiHeadsetFill className="h-6 w-6 text-cyan-300" /></div>,
         title: "Support",
         description:
-          "We offer support for all our clients. We are here to help you with any issues or questions you may have.",
+          "Dedicated post-launch support for updates, fixes, and continuous optimization as your business scales.",
      
       },
 ];
