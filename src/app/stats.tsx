@@ -13,34 +13,60 @@ const STATS = [
 function Counter({ target, suffix }: { target: number; suffix: string }) {
   const [count, setCount] = useState(0);
   const spanRef = useRef<HTMLSpanElement>(null);
-  const started = useRef(false);
+  const wasInView = useRef(false);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const el = spanRef.current;
     if (!el) return;
+
+    const startAnimation = () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+
+      const steps = 40;
+      const intervalMs = 1500 / steps;
+      const increment = target / steps;
+      let current = 0;
+
+      setCount(0);
+
+      timerRef.current = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          setCount(target);
+          if (timerRef.current) {
+            clearInterval(timerRef.current);
+            timerRef.current = null;
+          }
+        } else {
+          setCount(Math.floor(current));
+        }
+      }, intervalMs);
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true;
-          const steps = 40;
-          const intervalMs = 1500 / steps;
-          const increment = target / steps;
-          let current = 0;
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              setCount(target);
-              clearInterval(timer);
-            } else {
-              setCount(Math.floor(current));
-            }
-          }, intervalMs);
+        if (entry.isIntersecting && !wasInView.current) {
+          wasInView.current = true;
+          startAnimation();
+        }
+
+        if (!entry.isIntersecting) {
+          wasInView.current = false;
         }
       },
       { threshold: 0.3 }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+
+    return () => {
+      observer.disconnect();
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
   }, [target]);
 
   return (

@@ -9,18 +9,15 @@ import {
 
 const FAQS = () => {
     return ( 
-        <div className=" mt-10 md:py-10 bg-[#f6f5f4] w-full
-        rounded-3xl
-        
-        ">
-          <div className=" p-10 md:p-4 md:px-20">
-            <div className="text-3xl md:text-7xl font-bold text-black">
-              Have questions ?
+        <div className="mt-12 w-full rounded-2xl border border-neutral-200 bg-neutral-100/95">
+          <div className="p-6 md:p-10 md:px-14">
+            <div className="text-2xl font-bold text-neutral-900 md:text-4xl">
+              Have questions?
             </div>
-            <div className="  font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-emerald-600 to-blue-300 bg-clip-text text-transparent">
+            <div className="bg-gradient-to-r from-emerald-600 to-cyan-500 bg-clip-text text-2xl font-semibold text-transparent md:text-4xl">
               Get answers.
             </div>
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible className="mt-4">
     <AccordionItem value="item-1">
       <AccordionTrigger>What does Technose Digital Pvt Ltd do?</AccordionTrigger>
       <AccordionContent>

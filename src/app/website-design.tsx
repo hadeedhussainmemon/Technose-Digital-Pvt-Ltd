@@ -41,13 +41,12 @@ const WebsiteDesign = () => {
                 {columns.map((column, columnIndex) => (
                     <div key={columnIndex} className="grid gap-4">
                         {column.map((image) => (
-                            <div key={image.src}>
+                            <div key={image.src} className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
                                 <Image
-                                    width={800}
-                                    height={1000}
+                                    fill
                                     priority
                                     sizes="(max-width: 768px) 50vw, 25vw"
-                                    className="h-auto max-w-full rounded-lg"
+                                    className="object-cover"
                                     src={image.src}
                                     alt={image.alt}
                                 />
