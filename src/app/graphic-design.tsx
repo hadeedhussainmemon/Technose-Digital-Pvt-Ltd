@@ -14,8 +14,8 @@ const GraphicDesign = () => {
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
         >
-          <div className="text-4xl md:pb-8 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#00AAE7] to-cyan-300 bg-opacity-50 font-bold">
-            Graphic Design <br /> for modern brands
+          <div className="text-4xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#00AAE7] to-cyan-300 bg-opacity-50 font-bold">
+            Graphic Design For Modern Brands
           </div>
 
           <p className="mt-4 text-lg font-normal  text-black/70 max-w-lg text-center mx-auto px-4">

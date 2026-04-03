@@ -30,9 +30,9 @@ const EcommerceStores = () => {
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
         >
-          <div className="text-4xl py-10 md:pb-8 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#00AAE7] to-neutral-800 bg-opacity-50 font-bold">
-            E-commerce Stores <br /> that are built to sell
-          </div>
+          <div className="text-4xl pb-5 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-200 bg-opacity-50 font-bold">
+          E-commerce Stores That Are Built To Sell
+        </div>
 
           <p className="mt-4 text-lg font-normal  text-neutral-800 max-w-lg text-center mx-auto px-4">
             We build E-commerce experiences with clear product storytelling,

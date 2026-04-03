@@ -74,16 +74,16 @@ export default function Home() {
            initial={{ y: 20, opacity: 0 }}
            animate={{ y: 0, opacity: 1 }}
            transition={{ duration: 0.8, ease: "easeOut" }}
-           className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 z-20 relative pointer-events-none"
+           className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 z-20 relative pointer-events-none font-bold tracking-tighter"
         >
-          Build authority online. <br /> Scale revenue with confidence.
+          Build Authority Online. <br /> Scale Revenue With Confidence.
         </motion.div>
         
         <motion.p 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4 z-20 relative pointer-events-none"
+          className="mt-4 text-lg font-medium text-black/70 max-w-lg text-center mx-auto px-4 z-20 relative pointer-events-none"
         >
           Technose Digital Pvt Ltd crafts high-performing websites, standout
           brand identities, and growth campaigns tailored to your business

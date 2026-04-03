@@ -1,7 +1,6 @@
 "use client";
 
-// TODO: Replace with your actual WhatsApp number (country code + digits only, no + or spaces)
-const WHATSAPP_NUMBER = "923001234567";
+const WHATSAPP_NUMBER = "923168035550";
 const WHATSAPP_MESSAGE =
   "Hi! I found you on your website and I'm interested in your services.";
 

@@ -15,7 +15,7 @@ const Services = () => {
            bg-clip-text text-transparent bg-gradient-to-b
             from-[#00AAE7] to-neutral-800 bg-opacity-50 mt-10 md:mt-20 font-bold"
         >
-          Growth services for <br /> ambitious businesses
+          Growth Services For <br /> Ambitious Businesses
         </div>
         <p
           className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4"

@@ -104,7 +104,7 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between px-6 md:px-10 pt-24 md:pt-10 pb-16 gap-10 lg:gap-14">
         <div className="w-full lg:w-[48%]">
           <div className="text-4xl sm:text-5xl md:text-6xl font-medium w-full lg:w-4/5 pb-5 leading-[1.05] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            Contact our strategy team
+            Contact Our Strategy Team
           </div>
           <div className="py-2 md:py-4 text-gray-300 text-base md:text-lg max-w-xl">
             Tell us your goals and we will recommend the right roadmap for your
@@ -142,7 +142,7 @@ export default function ContactForm() {
             >
               <div className="border-b border-white/10 pb-4">
                 <h2 className="text-white text-xl md:text-2xl font-medium">
-                  Let&apos;s discuss your project
+                  Let&apos;s Discuss Your Project
                 </h2>
                 <p className="text-sm text-gray-300 mt-1 leading-relaxed">
                   Fill in a few details and our team will get back to you

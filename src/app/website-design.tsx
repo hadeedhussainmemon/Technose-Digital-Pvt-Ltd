@@ -33,8 +33,8 @@ const WebsiteDesign = () => {
                 transition={{ duration: 0.8 }}
                 className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2"
             >
-                <div className="text-4xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#00AAE7] to-cyan-300 bg-opacity-50">
-                    Website Design <br /> that drives conversions
+                <div className="text-3xl pb-5 md:text-7xl px-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-200 bg-opacity-50 font-bold">
+                    Website Design That Drives Conversions
                 </div>
                 <p className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4">
                     We design and build high-performance websites that look premium,

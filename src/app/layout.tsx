@@ -3,9 +3,9 @@ import "./globals.css";
 import WhatsAppButton from "@/components/whatsapp-button";
 import BackToTop from "@/components/back-to-top";
 
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-const font = Inter({ subsets: ["latin"] });
+const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.technose-digital.com";
 
@@ -27,24 +27,24 @@ const jsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Technose Digital Pvt Ltd | Web, Branding, and Growth",
+    default: "Technose Digital Pvt Ltd | High-Performing Web & Branding Agency",
     template: "%s | Technose Digital Pvt Ltd",
   },
   description:
-    "Technose Digital Pvt Ltd helps businesses grow with conversion-focused websites, E-commerce stores, branding, and digital marketing.",
+    "Technose Digital Pvt Ltd helps businesses scale with conversion-focused websites, E-commerce stores, branding, and digital growth marketing.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Technose Digital Pvt Ltd",
+    title: "Technose Digital Pvt Ltd | Web, Branding, and Growth",
     description:
-      "Conversion-focused websites, E-commerce stores, branding, and digital marketing for growth-ready businesses.",
-    url: "/",
+      "Scale your business with high-performing web design, branding, and conversion-focused digital marketing.",
+    url: siteUrl,
     siteName: "Technose Digital Pvt Ltd",
     type: "website",
     images: [
       {
-        url: "/api/og?title=Technose%20Digital%20Pvt%20Ltd&subtitle=Web%2C%20Branding%2C%20and%20Growth",
+        url: `${siteUrl}/api/og?title=Technose%20Digital%20Pvt%20Ltd&subtitle=Web%2C%20Branding%2C%20and%20Growth`,
         width: 1200,
         height: 630,
         alt: "Technose Digital Pvt Ltd agency showcase",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description:
       "Scale your business with high-performing web design, branding, and digital marketing.",
     images: [
-      "/api/og?title=Technose%20Digital%20Pvt%20Ltd&subtitle=Web%2C%20Branding%2C%20and%20Growth",
+      `${siteUrl}/api/og?title=Technose%20Digital%20Pvt%20Ltd&subtitle=Web%2C%20Branding%2C%20and%20Growth`,
     ],
   },
 };

@@ -17,10 +17,10 @@ const FAQS = () => {
         >
           <div className="p-6 md:p-10 md:px-14">
             <div className="text-2xl font-bold text-neutral-900 md:text-5xl">
-              Have questions?
+              Have Questions?
             </div>
             <div className="bg-gradient-to-r from-[#00AAE7] to-cyan-500 bg-clip-text text-2xl font-bold text-transparent md:text-5xl">
-              Get answers.
+              Get Answers.
             </div>
             <Accordion type="single" collapsible className="mt-8">
               <AccordionItem value="item-1">
