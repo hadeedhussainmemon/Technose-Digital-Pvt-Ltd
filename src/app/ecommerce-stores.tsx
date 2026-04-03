@@ -39,7 +39,6 @@ const EcommerceStores = () => {
               key={index}
               className="flex flex-col items-center justify-center w-full"
             >
-<<<<<<< HEAD:src/app/ecommerce-stores.tsx
               <div className="flex flex-col items-center justify-center ">
                 <Image
                   src={store.image}
@@ -48,18 +47,6 @@ const EcommerceStores = () => {
                   height={400}
                   className="rounded-lg mx-auto"
                 />
-=======
-              <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto">
-                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg bg-white p-2">
-                  <Image
-                    src={store.image}
-                    alt={`${store.name} Shopify storefront preview`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-contain"
-                  />
-                </div>
->>>>>>> ee707cd74b33935e25fafac40d41dd434525ad26:src/app/shopify-stores.tsx
                 <p className="text-neutral-800 font-bold text-lg mt-4 text-center ">
                   &quot;{store.quote}&quot;
                 </p>

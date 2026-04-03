@@ -99,19 +99,11 @@ export default function ContactForm() {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="w-full md:items-center md:justify-center bg-white antialiased bg-grid-black/[0.02] relative overflow-hidden">
-      <PricingNavbar />
-      <div className="md:flex items-start justify-center md:py-20 px-6">
-        <div>
-          <div className="text-5xl font-medium w-full md:w-2/3 pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 bg-opacity-50">
-=======
     <div className="w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden min-h-screen">
       <PricingNavbar />
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between px-6 md:px-10 pt-24 md:pt-10 pb-16 gap-10 lg:gap-14">
         <div className="w-full lg:w-[48%]">
           <div className="text-4xl sm:text-5xl md:text-6xl font-medium w-full lg:w-4/5 pb-5 leading-[1.05] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
->>>>>>> ee707cd74b33935e25fafac40d41dd434525ad26
             Contact our strategy team
           </div>
           <div className="py-2 md:py-4 text-gray-300 text-base md:text-lg max-w-xl">
@@ -295,17 +287,9 @@ export default function ContactForm() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-<<<<<<< HEAD
                         <SelectItem value="Website Design">Website Design</SelectItem>
                         <SelectItem value="E-commerce Development">
                           E-commerce Development
-=======
-                        <SelectItem value="Website Design">
-                          Website Design
-                        </SelectItem>
-                        <SelectItem value="Shopify Development">
-                          Shopify Development
->>>>>>> ee707cd74b33935e25fafac40d41dd434525ad26
                         </SelectItem>
                         <SelectItem value="Graphic Design">
                           Graphic Design
@@ -388,11 +372,7 @@ export default function ContactForm() {
                     required
                   />
                 </div>
-<<<<<<< HEAD
                 <div className="text-black font-light md:w-3/4 mb-1">
-=======
-                <div className="text-gray-200 text-sm font-light leading-relaxed">
->>>>>>> ee707cd74b33935e25fafac40d41dd434525ad26
                   I agree to receive communication from Technose Digital Pvt Ltd
                   regarding my inquiry.
                 </div>
