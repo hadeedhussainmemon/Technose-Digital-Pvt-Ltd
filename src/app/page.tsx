@@ -80,14 +80,16 @@ export default function Home() {
         <div className="flex items-center justify-center gap-4 flex-wrap my-6">
           <Link
             href="/contact"
-            className="cursor-pointer flex items-center justify-center border rounded-full px-6 py-2 text-white bg-gradient-to-r bg-[#00AAE7] border-transparent font-medium hover:opacity-90 transition-opacity"
+            className="cursor-pointer flex items-center justify-center border rounded-full px-6 py-2 text-white bg-gradient-to-r bg-[#00AAE7] border-transparent font-medium hover:opacity-90 transition-opacity z-20 relative pointer-events-auto"
           >
             Start a Project
           </Link>
-
         </div>
-
-        <div className="w-full pt-20">
+      </div>
+      
+      {/* Page Content Block */}
+      <div className="w-full relative z-10 antialiased bg-white pb-20">
+        <div className="w-full pt-10">
           <SliderOne />
         </div>
         <Stats />
@@ -108,7 +110,7 @@ export default function Home() {
         </div>
         <FAQS />
       </div>
-    </div>
+      </div>
     </div>
   );
 }

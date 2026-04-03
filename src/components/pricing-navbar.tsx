@@ -24,7 +24,7 @@ const PricingNavbar = () => {
           <Link className="cursor-pointer" href="/">
             <Image
               priority
-              src="/logo/logo.jpg"
+              src="/logo/logo.png"
               alt="Technose Digital Pvt Ltd logo"
               width={100}
               height={100}

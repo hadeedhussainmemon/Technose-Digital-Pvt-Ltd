@@ -3,18 +3,18 @@
 import Image from "next/image";
 
 const showcaseImages = [
-    { src: "/images/business.jpeg", alt: "Dummy project 01 website preview" },
-    { src: "/images/coffe.jpeg", alt: "Dummy project 02 website preview" },
-    { src: "/images/small-business-3.webp", alt: "Dummy project 03 website preview" },
-    { src: "/images/man.jpeg", alt: "Dummy project 04 website preview" },
-    { src: "/images/image-business.jpeg", alt: "Dummy project 05 website preview" },
-    { src: "/images/custom-2.jpeg", alt: "Dummy project 06 website preview" },
-    { src: "/images/custom-3.jpeg", alt: "Dummy project 07 website preview" },
-    { src: "/images/design-g.webp", alt: "Dummy project 08 website preview" },
-    { src: "/images/sales.webp", alt: "Dummy project 09 website preview" },
-    { src: "/images/assets.webp", alt: "Dummy project 10 website preview" },
-    { src: "/images/ewr.webp", alt: "Dummy project 11 website preview" },
-    { src: "/images/combo.png", alt: "Dummy project 12 website preview" },
+    { src: "/images/business.jpeg", alt: "Corporate project 01 website preview" },
+    { src: "/images/coffe.jpeg", alt: "Coffee shop project 02 website preview" },
+    { src: "/images/small-business-3.webp", alt: "Small firm project 03 website preview" },
+    { src: "/images/man.jpeg", alt: "Portfolio project 04 website preview" },
+    { src: "/images/image-business.jpeg", alt: "Agency project 05 website preview" },
+    { src: "/images/custom-2.jpeg", alt: "SaaS project 06 website preview" },
+    { src: "/images/custom-3.jpeg", alt: "Analytics project 07 website preview" },
+    { src: "/images/design-g.webp", alt: "Creative project 08 website preview" },
+    { src: "/images/sales.webp", alt: "E-Commerce project 09 website preview" },
+    { src: "/images/assets.webp", alt: "Fintech project 10 website preview" },
+    { src: "/images/ewr.webp", alt: "Logistics project 11 website preview" },
+    { src: "/images/combo.png", alt: "B2B project 12 website preview" },
 ];
 
 const WebsiteDesign = () => {

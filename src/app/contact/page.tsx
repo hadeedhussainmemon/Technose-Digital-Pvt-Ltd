@@ -111,7 +111,7 @@ export default function ContactForm() {
             business.
           </div>
 
-          <div className="bg-[#f6f5f4] lg:w-4/5 space-y-5 p-5 md:p-6 rounded-2xl mt-6 hidden md:flex md:flex-col shadow-sm">
+          <div className="bg-white/5 lg:w-4/5 space-y-5 p-5 md:p-6 rounded-2xl mt-6 hidden md:flex md:flex-col shadow-sm border border-white/10 text-white">
             <div className="flex gap-4 border-b border-black/10">
               <div className="font-normal pb-4">
                 End-to-end support for websites, branding, and growth campaigns
@@ -372,7 +372,7 @@ export default function ContactForm() {
                     required
                   />
                 </div>
-                <div className="text-black font-light md:w-3/4 mb-1">
+                <div className="text-white font-light md:w-3/4 mb-1">
                   I agree to receive communication from Technose Digital Pvt Ltd
                   regarding my inquiry.
                 </div>

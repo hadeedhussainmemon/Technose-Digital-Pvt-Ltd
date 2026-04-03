@@ -38,11 +38,11 @@ const Navbar = ({
         <Link className="cursor-pointer" href="/">
           <Image
             priority
-            src="/logo/logo.jpg"
+            src="/logo/logo.png"
             alt="Technose Digital Pvt Ltd logo"
             width={100}
             height={100}
-            className="w-10 h-10 md:w-14 md:h-14 mix-blend-multiply"
+            className="w-10 h-10 md:w-14 md:h-14"
           />
         </Link>
 

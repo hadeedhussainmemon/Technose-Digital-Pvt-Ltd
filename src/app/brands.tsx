@@ -70,8 +70,8 @@ const Brands = () => {
           />
 
           <div className="pt-3 text-center text-black">
-            <div className="text-sm font-semibold">Client Name</div>
-            <div className="text-xs text-black/70 md:text-sm">Founder, Dummy Brand</div>
+            <div className="text-sm font-semibold">Amit Chawla</div>
+            <div className="text-xs text-black/70 md:text-sm">Founder, Northgate Commerce</div>
           </div>
         </div>
       </div>

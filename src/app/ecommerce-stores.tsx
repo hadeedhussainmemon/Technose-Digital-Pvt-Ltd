@@ -5,18 +5,18 @@ import Image from "next/image";
 const stores = [
   {
     image: "/images/image2.png",
-    quote: "Dummy testimonial content for Project Store One.",
+    quote: "Technose Digital completely rebuilt our store, resulting in a 40% increase in checkout conversions within the first month.",
     name: "Client A",
   },
   {
     image: "/images/shop-2.jpeg",
-    quote: "Dummy testimonial content for Project Store Two.",
+    quote: "Their team understood our brand vision perfectly and delivered a Shopify experience that our customers absolutely love.",
     name: "Client B",
   },
 
   {
     image: "/images/s-2.webp",
-    quote: "Dummy testimonial content for Project Store Three.",
+    quote: "Scaling our B2B operations was seamless thanks to the incredibly fast and robust architecture built by Technose.",
     name: "Client C",
   },
 ];

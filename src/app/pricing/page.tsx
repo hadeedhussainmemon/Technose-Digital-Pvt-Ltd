@@ -67,7 +67,7 @@ const Packages = () => {
       <PricingNavbar />
 
       <div className="flex items-center justify-center flex-col">
-        <div className="text-5xl pb-4 md:pb-8 text-black/30 px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-black/900 bg-opacity-50">
+        <div className="text-5xl pb-4 md:pb-8 text-black px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80">
           Our Packages
         </div>
         <p className="text-black/70 text-center max-w-lg px-6 pb-12">

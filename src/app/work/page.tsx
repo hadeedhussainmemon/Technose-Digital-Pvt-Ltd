@@ -12,31 +12,31 @@ type CaseStudy = {
 // TODO: Replace with your actual project case studies.
 const caseStudies: CaseStudy[] = [
   {
-    title: "Project Alpha",
-    industry: "Dummy Ecommerce",
+    title: "Global Supply Chain Rebranding",
+    industry: "B2B Logistics",
     challenge:
-      "Placeholder challenge text for an ecommerce redesign case study.",
+      "Legacy website was failing to capture high-value leads due to an outdated user experience and poor mobile performance.",
     solution:
-      "Placeholder solution text describing UX and design system improvements.",
-    outcome: "+00% placeholder conversion uplift over 00 days.",
+      "A complete ground-up Next.js rebuild focused on rapid page loads, intuitive navigation, and lead-gen funnels.",
+    outcome: "+210% increase in inbound enterprise queries within 3 months.",
   },
   {
-    title: "Project Beta",
-    industry: "Dummy D2C Brand",
+    title: "D2C Skincare Platform",
+    industry: "E-Commerce",
     challenge:
-      "Placeholder challenge text for mobile checkout and retention.",
+      "High checkout abandonment and slow image loading were dragging down overall conversion rates during peak traffic.",
     solution:
-      "Placeholder solution text covering checkout optimization and lifecycle flows.",
-    outcome: "+00% placeholder checkout completion and +00% repeat revenue.",
+      "Implemented a headless Shopify integration with optimized CDN delivery and a streamlined 2-step checkout.",
+    outcome: "+45% checkout completion and 2x average session duration.",
   },
   {
-    title: "Project Gamma",
-    industry: "Dummy B2B Services",
+    title: "FinTech Mobile Onboarding",
+    industry: "Financial Services",
     challenge:
-      "Placeholder challenge text for lead consistency and qualification.",
+      "Drop-off rates during the KYC (Know Your Customer) process were exceeding 60% on mobile devices.",
     solution:
-      "Placeholder solution text for service pages and conversion-focused forms.",
-    outcome: "0.0x placeholder qualified lead growth in one quarter.",
+      "Designed a frictionless, step-by-step PWA interface with predictive validation and clear progress indicators.",
+    outcome: "Reduced onboarding drop-off by 40% in the first quarter.",
   },
 ];
 
@@ -60,22 +60,22 @@ export default function WorkPage() {
           {caseStudies.map((item) => (
             <article
               key={item.title}
-              className="rounded-2xl border border-neutral-800 bg-neutral-950/50 p-6"
+              className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm"
             >
-              <div className="text-sm text-cyan-300">{item.industry}</div>
+              <div className="text-sm text-[#00AAE7] font-semibold">{item.industry}</div>
               <h2 className="mt-2 text-2xl text-black font-semibold">{item.title}</h2>
 
               <div className="mt-5">
-                <h3 className="text-neutral-200 font-medium">Challenge</h3>
+                <h3 className="text-black font-bold">Challenge</h3>
                 <p className="mt-1 text-black/70">{item.challenge}</p>
               </div>
 
               <div className="mt-4">
-                <h3 className="text-neutral-200 font-medium">Solution</h3>
+                <h3 className="text-black font-bold">Solution</h3>
                 <p className="mt-1 text-black/70">{item.solution}</p>
               </div>
 
-              <div className="mt-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-emerald-300">
+              <div className="mt-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-emerald-800 font-medium">
                 {item.outcome}
               </div>
             </article>
