@@ -3,9 +3,9 @@ import "./globals.css";
 import WhatsAppButton from "@/components/whatsapp-button";
 import BackToTop from "@/components/back-to-top";
 
-import { Outfit } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const font = Outfit({ subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.technose-digital.com";
 
@@ -14,7 +14,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "Technose Digital Pvt Ltd",
   url: siteUrl,
-  logo: `${siteUrl}/images/assets.webp`,
+  logo: `${siteUrl}/logo/logo.png`,
   description:
     "Technose Digital Pvt Ltd helps businesses grow with conversion-focused websites, E-commerce stores, branding, and digital marketing.",
   contactPoint: {

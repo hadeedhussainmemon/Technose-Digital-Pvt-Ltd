@@ -40,9 +40,9 @@ const Navbar = ({
             priority
             src="/logo/logo.png"
             alt="Technose Digital Pvt Ltd logo"
-            width={200}
-            height={200}
-            className="w-16 h-16 md:w-24 md:h-24"
+            width={250}
+            height={250}
+            className="w-20 h-20 md:w-32 md:h-32"
           />
         </Link>
 
