@@ -12,46 +12,46 @@ type CaseStudy = {
 // TODO: Replace with your actual project case studies.
 const caseStudies: CaseStudy[] = [
   {
-    title: "Northgate Commerce Redesign",
-    industry: "D2C Ecommerce",
+    title: "Project Alpha",
+    industry: "Dummy Ecommerce",
     challenge:
-      "Low conversion rate and inconsistent branding across landing pages.",
+      "Placeholder challenge text for an ecommerce redesign case study.",
     solution:
-      "Rebuilt the storefront UX, streamlined product page hierarchy, and created a design system for campaign pages.",
-    outcome: "+38% conversion rate and +24% average order value in 90 days.",
+      "Placeholder solution text describing UX and design system improvements.",
+    outcome: "+00% placeholder conversion uplift over 00 days.",
   },
   {
-    title: "Urban Bloom Shopify Growth Sprint",
-    industry: "Beauty and Personal Care",
+    title: "Project Beta",
+    industry: "Dummy D2C Brand",
     challenge:
-      "High mobile drop-off during checkout and weak retention from paid traffic.",
+      "Placeholder challenge text for mobile checkout and retention.",
     solution:
-      "Optimized mobile checkout flow, improved PDP speed, and launched lifecycle email sequences.",
-    outcome: "+31% checkout completion and +42% returning customer revenue.",
+      "Placeholder solution text covering checkout optimization and lifecycle flows.",
+    outcome: "+00% placeholder checkout completion and +00% repeat revenue.",
   },
   {
-    title: "PrimeBuild Lead Engine",
-    industry: "B2B Construction Services",
+    title: "Project Gamma",
+    industry: "Dummy B2B Services",
     challenge:
-      "Website traffic existed but qualified inbound leads were inconsistent.",
+      "Placeholder challenge text for lead consistency and qualification.",
     solution:
-      "Created service-focused pages, lead magnets, and a conversion-first contact workflow.",
-    outcome: "2.7x increase in qualified leads over one quarter.",
+      "Placeholder solution text for service pages and conversion-focused forms.",
+    outcome: "0.0x placeholder qualified lead growth in one quarter.",
   },
 ];
 
 export default function WorkPage() {
   return (
-    <main className="w-full min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
+    <main className="w-full min-h-screen bg-white antialiased bg-grid-black/[0.02]">
       <PricingNavbar />
 
       <section className="max-w-6xl mx-auto px-6 pb-20">
         <div className="text-center pt-4 md:pt-10">
-          <h1 className="text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+          <h1 className="text-4xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80">
             Selected Work
           </h1>
-          <p className="mt-4 text-neutral-300 max-w-2xl mx-auto">
-            A snapshot of project outcomes across web design, Shopify,
+          <p className="mt-4 text-black/70 max-w-2xl mx-auto">
+            A snapshot of project outcomes across web design, E-commerce,
             branding, and growth execution.
           </p>
         </div>
@@ -63,16 +63,16 @@ export default function WorkPage() {
               className="rounded-2xl border border-neutral-800 bg-neutral-950/50 p-6"
             >
               <div className="text-sm text-cyan-300">{item.industry}</div>
-              <h2 className="mt-2 text-2xl text-white font-semibold">{item.title}</h2>
+              <h2 className="mt-2 text-2xl text-black font-semibold">{item.title}</h2>
 
               <div className="mt-5">
                 <h3 className="text-neutral-200 font-medium">Challenge</h3>
-                <p className="mt-1 text-neutral-400">{item.challenge}</p>
+                <p className="mt-1 text-black/70">{item.challenge}</p>
               </div>
 
               <div className="mt-4">
                 <h3 className="text-neutral-200 font-medium">Solution</h3>
-                <p className="mt-1 text-neutral-400">{item.solution}</p>
+                <p className="mt-1 text-black/70">{item.solution}</p>
               </div>
 
               <div className="mt-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-emerald-300">
@@ -85,7 +85,7 @@ export default function WorkPage() {
         <div className="mt-12 text-center">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center border rounded-full px-6 py-2 text-white bg-gradient-to-r from-cyan-500 to-emerald-400 border-transparent font-medium hover:opacity-90 transition-opacity"
+            className="inline-flex items-center justify-center border rounded-full px-6 py-2 text-white bg-gradient-to-r bg-[#00AAE7] border-transparent font-medium hover:opacity-90 transition-opacity"
           >
             Discuss Your Project
           </Link>

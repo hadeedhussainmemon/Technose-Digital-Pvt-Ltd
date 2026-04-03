@@ -8,14 +8,14 @@ const Services = () => {
       <div
         className="text-4xl pb-5 md:text-7xl text-center
          bg-clip-text text-transparent bg-gradient-to-b
-          from-cyan-400 to-neutral-50 bg-opacity-50 mt-20"
+          from-cyan-400 to-black/90 bg-opacity-50 mt-20"
       >
         Growth services for ambitious businesses
       </div>
       <p
-        className="mt-4 text-lg font-normal text-neutral-300 max-w-lg   text-center mx-auto"
+        className="mt-4 text-lg font-normal text-black/70 max-w-lg   text-center mx-auto"
       >
-        From high-converting websites and Shopify development to branding and
+        From high-converting websites and E-commerce development to branding and
         performance marketing, we execute what drives measurable growth.
       </p>
 

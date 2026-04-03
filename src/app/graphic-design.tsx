@@ -12,7 +12,7 @@ const GraphicDesign = () => {
           Graphic Design <br /> for modern brands
         </div>
 
-        <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto">
+        <p className="mt-4 text-lg font-normal  text-black/70 max-w-lg text-center mx-auto">
           From identity systems and social creatives to campaign visuals, we
           create designs that make your brand instantly recognizable.
         </p>

@@ -24,7 +24,7 @@ const FAQS = () => {
     <AccordionItem value="item-1">
       <AccordionTrigger>What does Technose Digital Pvt Ltd do?</AccordionTrigger>
       <AccordionContent>
-        We are a digital growth agency focused on web design, Shopify
+        We are a digital growth agency focused on web design, E-commerce
         development, branding, and marketing execution.
       </AccordionContent>
     </AccordionItem>

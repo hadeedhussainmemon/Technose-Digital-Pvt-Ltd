@@ -3,6 +3,10 @@ import "./globals.css";
 import WhatsAppButton from "@/components/whatsapp-button";
 import BackToTop from "@/components/back-to-top";
 
+import { Outfit } from "next/font/google";
+
+const font = Outfit({ subsets: ["latin"] });
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.technose-digital.com";
 
 const jsonLd = {
@@ -12,7 +16,7 @@ const jsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/images/assets.webp`,
   description:
-    "Technose Digital Pvt Ltd helps businesses grow with conversion-focused websites, Shopify stores, branding, and digital marketing.",
+    "Technose Digital Pvt Ltd helps businesses grow with conversion-focused websites, E-commerce stores, branding, and digital marketing.",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
@@ -27,14 +31,14 @@ export const metadata: Metadata = {
     template: "%s | Technose Digital Pvt Ltd",
   },
   description:
-    "Technose Digital Pvt Ltd helps businesses grow with conversion-focused websites, Shopify stores, branding, and digital marketing.",
+    "Technose Digital Pvt Ltd helps businesses grow with conversion-focused websites, E-commerce stores, branding, and digital marketing.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Technose Digital Pvt Ltd",
     description:
-      "Conversion-focused websites, Shopify stores, branding, and digital marketing for growth-ready businesses.",
+      "Conversion-focused websites, E-commerce stores, branding, and digital marketing for growth-ready businesses.",
     url: "/",
     siteName: "Technose Digital Pvt Ltd",
     type: "website",
@@ -65,7 +69,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif" }}>
+      <body className={font.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

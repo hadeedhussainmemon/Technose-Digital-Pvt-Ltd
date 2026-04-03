@@ -40,7 +40,7 @@ const FormSchema = z.object({
   ]),
   services: z.enum([
     "Website Design",
-    "Shopify Development",
+    "E-commerce Development",
     "Graphic Design",
     "Social Media Marketing",
     "Performance Marketing",
@@ -98,11 +98,11 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <div className="w-full md:items-center md:justify-center bg-white antialiased bg-grid-black/[0.02] relative overflow-hidden">
       <PricingNavbar />
       <div className="md:flex items-start justify-center md:py-20 px-6">
         <div>
-          <div className="text-5xl font-medium w-full md:w-2/3 pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          <div className="text-5xl font-medium w-full md:w-2/3 pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 bg-opacity-50">
             Contact our strategy team
           </div>
           <div className="py-4 text-gray-300">
@@ -236,8 +236,8 @@ export default function ContactForm() {
                       </FormControl>
                       <SelectContent>
                         <SelectItem value="Website Design">Website Design</SelectItem>
-                        <SelectItem value="Shopify Development">
-                          Shopify Development
+                        <SelectItem value="E-commerce Development">
+                          E-commerce Development
                         </SelectItem>
                         <SelectItem value="Graphic Design">Graphic Design</SelectItem>
                         <SelectItem value="Social Media Marketing">
@@ -300,7 +300,7 @@ export default function ContactForm() {
                 <div>
                   <Checkbox className="text-[#6c6684]" required />
                 </div>
-                <div className="text-white font-light md:w-3/4 mb-1">
+                <div className="text-black font-light md:w-3/4 mb-1">
                   I agree to receive communication from Technose Digital Pvt Ltd
                   regarding my inquiry.
                 </div>

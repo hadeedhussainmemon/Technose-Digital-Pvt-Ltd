@@ -3,18 +3,18 @@
 import Image from "next/image";
 
 const showcaseImages = [
-    { src: "/images/business.jpeg", alt: "Corporate website homepage design" },
-    { src: "/images/coffe.jpeg", alt: "Cafe and local business website design" },
-    { src: "/images/small-business-3.webp", alt: "Small business landing page design" },
-    { src: "/images/man.jpeg", alt: "Personal brand portfolio website design" },
-    { src: "/images/image-business.jpeg", alt: "Consulting firm website interface" },
-    { src: "/images/custom-2.jpeg", alt: "Custom service page design layout" },
-    { src: "/images/custom-3.jpeg", alt: "Creative agency website section design" },
-    { src: "/images/design-g.webp", alt: "Modern visual style website concept" },
-    { src: "/images/sales.webp", alt: "Sales-focused marketing page design" },
-    { src: "/images/assets.webp", alt: "Business assets and conversion page design" },
-    { src: "/images/ewr.webp", alt: "Brand storytelling website section" },
-    { src: "/images/combo.png", alt: "Multi-device website presentation" },
+    { src: "/images/business.jpeg", alt: "Dummy project 01 website preview" },
+    { src: "/images/coffe.jpeg", alt: "Dummy project 02 website preview" },
+    { src: "/images/small-business-3.webp", alt: "Dummy project 03 website preview" },
+    { src: "/images/man.jpeg", alt: "Dummy project 04 website preview" },
+    { src: "/images/image-business.jpeg", alt: "Dummy project 05 website preview" },
+    { src: "/images/custom-2.jpeg", alt: "Dummy project 06 website preview" },
+    { src: "/images/custom-3.jpeg", alt: "Dummy project 07 website preview" },
+    { src: "/images/design-g.webp", alt: "Dummy project 08 website preview" },
+    { src: "/images/sales.webp", alt: "Dummy project 09 website preview" },
+    { src: "/images/assets.webp", alt: "Dummy project 10 website preview" },
+    { src: "/images/ewr.webp", alt: "Dummy project 11 website preview" },
+    { src: "/images/combo.png", alt: "Dummy project 12 website preview" },
 ];
 
 const WebsiteDesign = () => {
@@ -26,12 +26,12 @@ const WebsiteDesign = () => {
     ];
 
     return (
-        <div className="text-white">
+        <div className="text-black">
             <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
                 <div className="text-4xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-cyan-400 to-emerald-200 bg-opacity-50">
                     Website Design <br /> that drives conversions
                 </div>
-                <p className="mt-4 text-lg font-normal text-neutral-300 max-w-lg text-center mx-auto px-4">
+                <p className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4">
                     We design and build high-performance websites that look premium,
                     communicate trust, and turn visitors into qualified leads.
                 </p>

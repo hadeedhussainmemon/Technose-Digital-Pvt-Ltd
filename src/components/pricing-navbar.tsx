@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { AlignJustify, X } from "lucide-react";
-
 import Image from "next/image";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 import DropDownMenu from "./drop-down-menu";
 
 const PricingNavbar = () => {
@@ -24,7 +24,7 @@ const PricingNavbar = () => {
           <Link className="cursor-pointer" href="/">
             <Image
               priority
-              src="/logo/logo.svg"
+              src="/logo/logo.jpg"
               alt="Technose Digital Pvt Ltd logo"
               width={100}
               height={100}
@@ -37,7 +37,7 @@ const PricingNavbar = () => {
           {isDropDownVisible ? (
             <div
               onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
+              className="w-8 h-8 text-black/30 cursor-pointer"
             >
               <X />
               <DropDownMenu onClose={closeDropDown} />
@@ -45,20 +45,30 @@ const PricingNavbar = () => {
           ) : (
             <AlignJustify
               onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
+              className="w-8 h-8 text-black/30 cursor-pointer"
             />
           )}
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center space-x-4">
+          <Link
+            href="https://wa.me/923168035550"
+            className="flex items-center space-x-2 text-black hover:text-[#00AAE7] transition-colors font-medium"
+            target="_blank"
+          >
+            <FaWhatsapp className="w-5 h-5" />
+            <span>+92 316 8035550</span>
+          </Link>
           <Link
             href="/contact"
             className="
             inline-flex h-12 animate-shimmer items-center justify-center 
-            rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
-            bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors
-             focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2
-            focus:ring-offset-slate-50"
+            rounded-md border border-[#00AAE7] bg-[linear-gradient(110deg,#00aae7,45%,#0088cc,55%,#00aae7)] 
+            bg-[length:200%_100%] px-6 font-medium text-white transition-colors
+             focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2
+            focus:ring-offset-white
+
+            "
           >
             Contact
           </Link>

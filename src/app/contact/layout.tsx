@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Technose Digital Pvt Ltd to discuss your website, branding, Shopify, or marketing growth goals.",
+    "Contact Technose Digital Pvt Ltd to discuss your website, branding, E-commerce, or marketing growth goals.",
   alternates: {
     canonical: "/contact",
   },

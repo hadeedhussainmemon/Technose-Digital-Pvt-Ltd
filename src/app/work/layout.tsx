@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Explore case-study snapshots from Technose Digital Pvt Ltd across web design, Shopify, and growth campaigns.",
+    "Explore case-study snapshots from Technose Digital Pvt Ltd across web design, E-commerce, and growth campaigns.",
   alternates: {
     canonical: "/work",
   },

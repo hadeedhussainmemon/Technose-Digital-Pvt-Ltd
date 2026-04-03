@@ -57,10 +57,10 @@ export default function Stats() {
       <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-6 text-center">
         {STATS.map((s) => (
           <div key={s.label} className="flex flex-col gap-1">
-            <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-400 to-emerald-400">
+            <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-400 to-[#00AAE7]">
               <Counter target={s.value} suffix={s.suffix} />
             </div>
-            <div className="text-sm text-neutral-400 mt-1">{s.label}</div>
+            <div className="text-sm text-black/70 mt-1">{s.label}</div>
           </div>
         ))}
       </div>

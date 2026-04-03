@@ -4,12 +4,13 @@ import { useState } from "react";
 import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 import DropDownMenu from "./drop-down-menu";
 
 interface NavbarProps {
   scrollToWebsiteDesign: () => void;
   scrollToGraphicDesign: () => void;
-  scrollToShopifyStores: () => void;
+  scrollToEcommerceStores: () => void;
   scrollToBrands: () => void;
   scrollToServices: () => void;
 }
@@ -17,7 +18,7 @@ interface NavbarProps {
 const Navbar = ({
   scrollToWebsiteDesign,
   scrollToGraphicDesign,
-  scrollToShopifyStores,
+  scrollToEcommerceStores,
   scrollToBrands,
   scrollToServices,
 }: NavbarProps) => {
@@ -37,41 +38,39 @@ const Navbar = ({
         <Link className="cursor-pointer" href="/">
           <Image
             priority
-            src="/logo/logo.svg"
+            src="/logo/logo.jpg"
             alt="Technose Digital Pvt Ltd logo"
             width={100}
             height={100}
-            className="w-10 h-10 md:w-14 md:h-14"
+            className="w-10 h-10 md:w-14 md:h-14 mix-blend-multiply"
           />
         </Link>
 
         <div
           className="cursor-pointer hidden
             md:flex space-x-10 items-center
-             text-slate-300 text-center
-             bg-clip-text text-transparent
-             bg-gradient-to-b from-neutral-50
-              to bg-neutral-400 bg-opacity-50"
+             text-black text-center
+             font-medium"
         >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
+          <div onClick={scrollToWebsiteDesign} className="hover:text-[#00AAE7]">
             Website Design
           </div>
-          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
+          <div onClick={scrollToGraphicDesign} className="hover:text-[#00AAE7]">
             Graphic Design
           </div>
-          <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
-            Shopify Stores
+          <div onClick={scrollToEcommerceStores} className="hover:text-[#00AAE7]">
+            E-commerce Stores
           </div>
-          <div onClick={scrollToBrands} className="hover:text-gray-50">
+          <div onClick={scrollToBrands} className="hover:text-[#00AAE7]">
             Brands
           </div>
-          <div onClick={scrollToServices} className="hover:text-gray-50">
+          <div onClick={scrollToServices} className="hover:text-[#00AAE7]">
             Services
           </div>
-          <Link href="/work" className="hover:text-gray-50">
+          <Link href="/work" className="hover:text-[#00AAE7]">
             Work
           </Link>
-          <Link href="/pricing" className="hover:text-gray-50">
+          <Link href="/pricing" className="hover:text-[#00AAE7]">
             Packages
           </Link>
         </div>
@@ -80,7 +79,7 @@ const Navbar = ({
           {isDropDownVisible ? (
             <div
               onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
+              className="w-8 h-8 text-black cursor-pointer"
             >
               <X />
               <DropDownMenu onClose={closeDropDown} />
@@ -88,20 +87,28 @@ const Navbar = ({
           ) : (
             <AlignJustify
               onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
+              className="w-8 h-8 text-black cursor-pointer"
             />
           )}
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center space-x-4">
+          <Link
+            href="https://wa.me/923168035550"
+            className="flex items-center space-x-2 text-black hover:text-[#00AAE7] transition-colors font-medium"
+            target="_blank"
+          >
+            <FaWhatsapp className="w-5 h-5" />
+            <span>+92 316 8035550</span>
+          </Link>
           <Link
             href="/contact"
             className="
             inline-flex h-12 animate-shimmer items-center justify-center
-            rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)]
-            bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors
-             focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2
-            focus:ring-offset-slate-50"
+            rounded-md border border-[#00AAE7] bg-[linear-gradient(110deg,#00aae7,45%,#0088cc,55%,#00aae7)]
+            bg-[length:200%_100%] px-6 font-medium text-white transition-colors
+             focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2
+            focus:ring-offset-white"
           >
             Contact
           </Link>

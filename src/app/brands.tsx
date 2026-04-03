@@ -20,7 +20,7 @@ const logos = [
     image: "/logo/logoipsum-249.svg",
   },
   {
-    image: "/logo/stripelogo.png",
+    image: "/logo/logoipsum-247.svg",
   },
 ];
 
@@ -35,7 +35,7 @@ const Brands = () => {
           The best brands <br /> choose us
         </div>
 
-        <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto">
+        <p className="mt-4 text-lg font-normal  text-black/70 max-w-lg text-center mx-auto">
           From small businesses to large corporations, we have helped many
           brands elevate their business.
         </p>
@@ -57,15 +57,15 @@ const Brands = () => {
 
         <div
           className={cn(
-            "flex items-center justify-center text-xl xl:text-2xl pt-10 md:pt-0 pb-4  px-8  text-center text-white  ",
+            "flex items-center justify-center text-xl xl:text-2xl pt-10 md:pt-0 pb-4  px-8  text-center text-black  ",
             "font-serif"
           )}
         >
-          &quot;Technose Digital helped us unify design, development, and campaign
-          execution into one smooth growth engine.&quot;
+          &quot;Dummy testimonial text goes here. Replace this with a real client
+          quote when your portfolio is ready.&quot;
         </div>
 
-        <div className="items-center flex justify-center flex-col text-white">
+        <div className="items-center flex justify-center flex-col text-black">
           <Image
             src="/images/logo.svg"
             alt="Technose Digital logo"
@@ -75,8 +75,8 @@ const Brands = () => {
           />
 
           <div className=" text-center">
-            <div className="text-sm  font-medium pt-4">Amit Chawla</div>
-            <div className="text-sm">Founder, Northgate Commerce</div>
+            <div className="text-sm  font-medium pt-4">Client Name</div>
+            <div className="text-sm">Founder, Dummy Brand</div>
           </div>
         </div>
       </div>
