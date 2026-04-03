@@ -1,5 +1,4 @@
-"use client";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const showcaseImages = [
@@ -27,30 +26,46 @@ const WebsiteDesign = () => {
 
     return (
         <div className="text-black">
-            <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
-                <div className="text-4xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-cyan-400 to-emerald-200 bg-opacity-50">
+            <motion.div 
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2"
+            >
+                <div className="text-4xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#00AAE7] to-cyan-300 bg-opacity-50">
                     Website Design <br /> that drives conversions
                 </div>
                 <p className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4">
                     We design and build high-performance websites that look premium,
                     communicate trust, and turn visitors into qualified leads.
                 </p>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-10 px-4 md:px-0">
                 {columns.map((column, columnIndex) => (
                     <div key={columnIndex} className="grid gap-4">
-                        {column.map((image) => (
-                            <div key={image.src} className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+                        {column.map((image, index) => (
+                            <motion.div 
+                                key={image.src} 
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ 
+                                    duration: 0.6, 
+                                    delay: (columnIndex * 0.1) + (index * 0.1) 
+                                }}
+                                className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-sm"
+                            >
                                 <Image
                                     fill
                                     priority
                                     sizes="(max-width: 768px) 50vw, 25vw"
-                                    className="object-cover"
+                                    className="object-cover hover:scale-105 transition-transform duration-500"
                                     src={image.src}
                                     alt={image.alt}
                                 />
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 ))}

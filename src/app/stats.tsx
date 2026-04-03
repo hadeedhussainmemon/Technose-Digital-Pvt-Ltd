@@ -1,5 +1,4 @@
-"use client";
-
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 // TODO: Replace these numbers with your real stats
@@ -79,17 +78,23 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <div className="w-full py-12 border-y border-neutral-800">
-      <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-6 text-center">
+    <div className="w-full py-16 border-y border-neutral-100 bg-neutral-50/50">
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-6 text-center"
+      >
         {STATS.map((s) => (
           <div key={s.label} className="flex flex-col gap-1">
-            <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-400 to-[#00AAE7]">
+            <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#00AAE7] to-cyan-600">
               <Counter target={s.value} suffix={s.suffix} />
             </div>
-            <div className="text-sm text-black/70 mt-1">{s.label}</div>
+            <div className="text-sm font-medium text-black/70 mt-2 uppercase tracking-wider">{s.label}</div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

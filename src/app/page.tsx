@@ -14,6 +14,8 @@ import FAQS from "./faq";
 import Stats from "./stats";
 import { Hero3D } from "@/components/ui/hero-3d";
 
+import { motion } from "framer-motion";
+
 export default function Home() {
   const websiteDesignRef = useRef<HTMLDivElement>(null);
   const graphicDesignRef = useRef<HTMLDivElement>(null);
@@ -68,23 +70,39 @@ export default function Home() {
         {/* Real 3D Component Rendering Behind Hero Text */}
         <Hero3D />
         
-        <div className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 z-20 relative pointer-events-none">
+        <motion.div
+           initial={{ y: 20, opacity: 0 }}
+           animate={{ y: 0, opacity: 1 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+           className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 z-20 relative pointer-events-none"
+        >
           Build authority online. <br /> Scale revenue with confidence.
-        </div>
-        <p className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4 z-20 relative pointer-events-none">
+        </motion.div>
+        
+        <motion.p 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4 z-20 relative pointer-events-none"
+        >
           Technose Digital Pvt Ltd crafts high-performing websites, standout
           brand identities, and growth campaigns tailored to your business
           goals.
-        </p>
+        </motion.p>
 
-        <div className="flex items-center justify-center gap-4 flex-wrap my-6">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="flex items-center justify-center gap-4 flex-wrap my-6"
+        >
           <Link
             href="/contact"
             className="cursor-pointer flex items-center justify-center border rounded-full px-6 py-2 text-white bg-gradient-to-r bg-[#00AAE7] border-transparent font-medium hover:opacity-90 transition-opacity z-20 relative pointer-events-auto"
           >
             Start a Project
           </Link>
-        </div>
+        </motion.div>
       </div>
       
       {/* Page Content Block */}
