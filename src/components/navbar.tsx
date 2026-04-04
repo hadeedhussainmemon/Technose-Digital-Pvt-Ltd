@@ -77,34 +77,58 @@ const Navbar = ({
              text-black text-center
              font-medium"
         >
-          <div onClick={scrollToWebsiteDesign} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
+          <motion.div 
+            onClick={scrollToWebsiteDesign} 
+            whileHover={{ y: -5, x: 2 }}
+            className="relative group cursor-pointer hover:text-[#00AAE7] transition-all duration-300 py-2"
+          >
             Website Design
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-          </div>
-          <div onClick={scrollToGraphicDesign} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out shadow-[0_0_8px_rgba(0,170,231,0.6)]" />
+          </motion.div>
+          <motion.div 
+            onClick={scrollToGraphicDesign} 
+            whileHover={{ y: -5, x: 2 }}
+            className="relative group cursor-pointer hover:text-[#00AAE7] transition-all duration-300 py-2"
+          >
             Graphic Design
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-          </div>
-          <div onClick={scrollToEcommerceStores} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out shadow-[0_0_8px_rgba(0,170,231,0.6)]" />
+          </motion.div>
+          <motion.div 
+            onClick={scrollToEcommerceStores} 
+            whileHover={{ y: -5, x: 2 }}
+            className="relative group cursor-pointer hover:text-[#00AAE7] transition-all duration-300 py-2"
+          >
             E-commerce Stores
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-          </div>
-          <div onClick={scrollToBrands} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out shadow-[0_0_8px_rgba(0,170,231,0.6)]" />
+          </motion.div>
+          <motion.div 
+            onClick={scrollToBrands} 
+            whileHover={{ y: -5, x: 2 }}
+            className="relative group cursor-pointer hover:text-[#00AAE7] transition-all duration-300 py-2"
+          >
             Brands
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-          </div>
-          <div onClick={scrollToServices} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out shadow-[0_0_8_px_rgba(0,170,231,0.6)]" />
+          </motion.div>
+          <motion.div 
+            onClick={scrollToServices} 
+            whileHover={{ y: -5, x: 2 }}
+            className="relative group cursor-pointer hover:text-[#00AAE7] transition-all duration-300 py-2"
+          >
             Services
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-          </div>
-          <Link href="/work" className="relative group hover:text-[#00AAE7] transition-colors py-2">
-            Work
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-          </Link>
-          <Link href="/pricing" className="relative group hover:text-[#00AAE7] transition-colors py-2">
-            Packages
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
-          </Link>
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out shadow-[0_0_8px_rgba(0,170,231,0.6)]" />
+          </motion.div>
+          <motion.div whileHover={{ y: -5, x: 2 }} className="py-2">
+            <Link href="/work" className="relative group hover:text-[#00AAE7] transition-all duration-300">
+              Work
+              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out shadow-[0_0_8px_rgba(0,170,231,0.6)]" />
+            </Link>
+          </motion.div>
+          <motion.div whileHover={{ y: -5, x: 2 }} className="py-2">
+            <Link href="/pricing" className="relative group hover:text-[#00AAE7] transition-all duration-300">
+              Packages
+              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out shadow-[0_0_8px_rgba(0,170,231,0.6)]" />
+            </Link>
+          </motion.div>
         </div>
 
         <div className="flex lg:hidden">
@@ -134,18 +158,23 @@ const Navbar = ({
         <div className="hidden lg:flex items-center space-x-6">
 
           <motion.div
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="relative group overflow-hidden rounded-2xl"
           >
             <Link
               href="/contact"
               className="
-              inline-flex h-12 items-center justify-center 
-              rounded-2xl border-2 border-[#00AAE7]/30 bg-gradient-to-r from-[#00AAE7] to-[#0088cc]
-              px-8 font-bold text-white transition-all shadow-[0_0_20px_rgba(0,170,231,0.2)] hover:shadow-[0_0_30px_rgba(0,170,231,0.4)]
+              relative z-10 inline-flex h-12 items-center justify-center 
+              w-full px-8 font-bold text-white transition-all
+              bg-gradient-to-r from-[#00AAE7] to-[#0088cc]
+              border-2 border-white/20 shadow-[0_0_20px_rgba(0,170,231,0.2)]
               focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
             >
               Contact Us
+              
+              {/* Shimmer Effect Overlay */}
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-shimmer-fast pointer-events-none" />
             </Link>
           </motion.div>
         </div>

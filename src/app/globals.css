@@ -1,5 +1,14 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
- 
+@layer utilities {
+  .animate-shimmer-fast {
+    animation: shimmer-glint 2s infinite linear;
+  }
+}
+
+@keyframes shimmer-glint {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

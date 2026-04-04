@@ -102,12 +102,16 @@ export default function Home() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="group relative overflow-hidden rounded-3xl"
           >
             <Link
               href="/contact"
-              className="cursor-pointer flex items-center justify-center rounded-3xl px-10 py-4 text-white bg-gradient-to-r from-[#00AAE7] to-[#0088cc] font-bold tracking-tight shadow-[0_10px_30px_rgba(0,170,231,0.3)] hover:shadow-[0_15px_40px_rgba(0,170,231,0.4)] transition-all text-xl"
+              className="relative z-10 cursor-pointer flex items-center justify-center px-10 py-4 text-white bg-gradient-to-r from-[#00AAE7] to-[#0088cc] font-bold tracking-tight shadow-[0_10px_30px_rgba(0,170,231,0.3)] group-hover:shadow-[0_15px_40px_rgba(0,170,231,0.4)] transition-all text-xl"
             >
               Start A Project
+
+              {/* Shimmer Effect Overlay */}
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-shimmer-fast pointer-events-none" />
             </Link>
           </motion.div>
         

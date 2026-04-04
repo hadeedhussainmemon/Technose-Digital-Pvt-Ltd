@@ -67,6 +67,9 @@ const WebsiteDesign = () => {
                                     alt={image.alt}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                
+                                {/* Glint/Shimmer Overlay */}
+                                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer-fast pointer-events-none" />
                             </motion.div>
                         ))}
                     </div>
