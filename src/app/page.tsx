@@ -94,14 +94,19 @@ export default function Home() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="flex items-center justify-center gap-4 flex-wrap my-6"
+          className="flex items-center justify-center gap-4 flex-wrap my-6 z-20 relative pointer-events-auto"
         >
-          <Link
-            href="/contact"
-            className="cursor-pointer flex items-center justify-center border rounded-full px-6 py-2 text-white bg-gradient-to-r bg-[#00AAE7] border-transparent font-medium hover:opacity-90 transition-opacity z-20 relative pointer-events-auto"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Start a Project
-          </Link>
+            <Link
+              href="/contact"
+              className="cursor-pointer flex items-center justify-center border rounded-full px-8 py-3 text-white bg-gradient-to-r from-[#00AAE7] to-cyan-600 border-transparent font-bold tracking-tight shadow-lg shadow-cyan-500/20 hover:opacity-95 transition-all text-lg"
+            >
+              Start A Project
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
       
@@ -128,7 +133,7 @@ export default function Home() {
         </div>
         <FAQS />
       </div>
-      </div>
+    </div>
     </div>
   );
 }
