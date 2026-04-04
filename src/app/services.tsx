@@ -11,14 +11,14 @@ const Services = () => {
          transition={{ duration: 0.8 }}
       >
         <div
-          className="text-4xl pb-5 md:text-7xl text-center
+          className="text-4xl pb-5 md:text-8xl text-center
            bg-clip-text text-transparent bg-gradient-to-b
-            from-[#00AAE7] to-neutral-800 bg-opacity-50 mt-10 md:mt-20 font-bold"
+            from-black to-[#00AAE7] mt-10 md:mt-20 font-extrabold tracking-tighter"
         >
           Growth Services For <br /> Ambitious Businesses
         </div>
         <p
-          className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4"
+          className="mt-4 text-xl font-medium text-black/60 max-w-lg text-center mx-auto px-4"
         >
           From high-converting websites and E-commerce development to branding and
           performance marketing, we execute what drives measurable growth.

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AlignJustify, X } from "lucide-react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
@@ -23,6 +24,13 @@ const Navbar = ({
   scrollToServices,
 }: NavbarProps) => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY, scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 100 && !scrolled) setScrolled(true);
+    else if (latest <= 100 && scrolled) setScrolled(false);
+  });
 
   const toggleDropDown = () => {
     setIsDropDownVisible(!isDropDownVisible);
@@ -33,16 +41,33 @@ const Navbar = ({
   };
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-neutral-100 shadow-sm transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-24 md:h-28">
-        <Link className="cursor-pointer shrink-0" href="/">
+    <motion.div 
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-6 pointer-events-none"
+    >
+      <motion.div
+        className={`relative flex items-center justify-between w-full max-w-7xl px-6 md:px-10 transition-all duration-500 ease-in-out pointer-events-auto overflow-hidden ${
+          scrolled 
+            ? "h-20 bg-white/70 backdrop-blur-2xl rounded-3xl border border-white/20 shadow-[0_8px_32px_rgba(0,170,231,0.1)]" 
+            : "h-24 md:h-28 bg-white/20 backdrop-blur-md rounded-2xl border border-transparent shadow-none"
+        }`}
+      >
+        {/* Scroll Progress Bar */}
+        <motion.div 
+          className="absolute top-0 left-0 h-[2px] bg-gradient-to-r from-[#00AAE7] to-cyan-400 z-50"
+          style={{ scaleX: scrollYProgress, transformOrigin: "0%" }}
+        />
+
+        <Link className="cursor-pointer shrink-0 transition-transform duration-300 hover:scale-105" href="/">
           <Image
             priority
             src="/logo/logo.png"
             alt="Technose Digital Pvt Ltd logo"
             width={250}
             height={250}
-            className="w-20 h-20 md:w-32 md:h-32 object-contain"
+            className={`object-contain transition-all duration-500 ${scrolled ? 'w-16 h-16' : 'w-20 h-20 md:w-32 md:h-32'}`}
           />
         </Link>
 
@@ -52,26 +77,33 @@ const Navbar = ({
              text-black text-center
              font-medium"
         >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-[#00AAE7] transition-colors">
+          <div onClick={scrollToWebsiteDesign} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
             Website Design
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
           </div>
-          <div onClick={scrollToGraphicDesign} className="hover:text-[#00AAE7] transition-colors">
+          <div onClick={scrollToGraphicDesign} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
             Graphic Design
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
           </div>
-          <div onClick={scrollToEcommerceStores} className="hover:text-[#00AAE7] transition-colors">
+          <div onClick={scrollToEcommerceStores} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
             E-commerce Stores
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
           </div>
-          <div onClick={scrollToBrands} className="hover:text-[#00AAE7] transition-colors">
+          <div onClick={scrollToBrands} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
             Brands
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
           </div>
-          <div onClick={scrollToServices} className="hover:text-[#00AAE7] transition-colors">
+          <div onClick={scrollToServices} className="relative group cursor-pointer hover:text-[#00AAE7] transition-colors py-2">
             Services
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
           </div>
-          <Link href="/work" className="hover:text-[#00AAE7] transition-colors">
+          <Link href="/work" className="relative group hover:text-[#00AAE7] transition-colors py-2">
             Work
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
           </Link>
-          <Link href="/pricing" className="hover:text-[#00AAE7] transition-colors">
+          <Link href="/pricing" className="relative group hover:text-[#00AAE7] transition-colors py-2">
             Packages
+            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#00AAE7] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
           </Link>
         </div>
 
@@ -99,28 +131,26 @@ const Navbar = ({
           )}
         </div>
 
-        <div className="hidden lg:flex items-center space-x-4">
-          <Link
-            href="https://wa.me/923168035550"
-            className="flex items-center space-x-2 text-black hover:text-[#00AAE7] transition-colors font-medium whitespace-nowrap"
-            target="_blank"
+        <div className="hidden lg:flex items-center space-x-6">
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
-            <span>+92 316 8035550</span>
-          </Link>
-          <Link
-            href="/contact"
-            className="
-            inline-flex h-12 animate-shimmer items-center justify-center
-            rounded-md border border-[#00AAE7] bg-[linear-gradient(110deg,#00aae7,45%,#0088cc,55%,#00aae7)]
-            bg-[length:200%_100%] px-6 font-medium text-white transition-colors
-             focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
-          >
-            Contact
-          </Link>
+            <Link
+              href="/contact"
+              className="
+              inline-flex h-12 items-center justify-center 
+              rounded-2xl border-2 border-[#00AAE7]/30 bg-gradient-to-r from-[#00AAE7] to-[#0088cc]
+              px-8 font-bold text-white transition-all shadow-[0_0_20px_rgba(0,170,231,0.2)] hover:shadow-[0_0_30px_rgba(0,170,231,0.4)]
+              focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+            >
+              Contact Us
+            </Link>
+          </motion.div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

@@ -33,38 +33,40 @@ const WebsiteDesign = () => {
                 transition={{ duration: 0.8 }}
                 className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2"
             >
-                <div className="text-3xl pb-5 md:text-7xl px-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-200 bg-opacity-50 font-bold">
-                    Website Design That Drives Conversions
+                <div className="text-4xl pb-5 md:text-8xl px-10 bg-clip-text text-transparent bg-gradient-to-b from-black to-[#00AAE7] font-extrabold tracking-tighter">
+                    Website Design That <br /> Drives Conversions
                 </div>
-                <p className="mt-4 text-lg font-normal text-black/70 max-w-lg text-center mx-auto px-4">
+                <p className="mt-4 text-xl font-medium text-black/60 max-w-lg text-center mx-auto px-4">
                     We design and build high-performance websites that look premium,
                     communicate trust, and turn visitors into qualified leads.
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-10 px-4 md:px-0">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-10 px-4 md:px-10">
                 {columns.map((column, columnIndex) => (
-                    <div key={columnIndex} className="grid gap-4">
+                    <div key={columnIndex} className="grid gap-6">
                         {column.map((image, index) => (
                             <motion.div 
                                 key={image.src} 
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                whileHover={{ y: -5, scale: 1.02 }}
                                 viewport={{ once: true }}
                                 transition={{ 
                                     duration: 0.6, 
                                     delay: (columnIndex * 0.1) + (index * 0.1) 
                                 }}
-                                className="relative w-full aspect-[4/3] overflow-hidden rounded-lg shadow-sm"
+                                className="group relative w-full aspect-[4/3] overflow-hidden rounded-3xl bg-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,170,231,0.15)] transition-all duration-500 ease-out border border-black/5 hover:border-[#00AAE7]/30"
                             >
                                 <Image
                                     fill
                                     priority
                                     sizes="(max-width: 768px) 50vw, 25vw"
-                                    className="object-cover hover:scale-105 transition-transform duration-500"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     src={image.src}
                                     alt={image.alt}
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                             </motion.div>
                         ))}
                     </div>

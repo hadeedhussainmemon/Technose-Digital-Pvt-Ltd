@@ -49,14 +49,17 @@ export default function Home() {
   };
   return (
     <div className="w-full md:items-center md:justify-center bg-white relative overflow-hidden">
-      {/* Background Mesh Glows */}
-      <div className="pointer-events-none fixed inset-0 z-0 flex justify-center w-full">
-        <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#00AAE7] rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
-        <div className="absolute top-[20%] right-[-5%] w-96 h-96 bg-[#00AAE7] rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
-        <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-[#00AAE7]/30 rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
+      {/* Background Mesh Glows & Noise */}
+      <div className="pointer-events-none fixed inset-0 z-0 flex justify-center w-full overflow-hidden">
+        {/* Noise Overlay */}
+        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+        
+        <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#00AAE7] rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"></div>
+        <div className="absolute top-[20%] right-[-5%] w-96 h-96 bg-[#00AAE7] rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-[#00AAE7]/30 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
-      <div className="relative z-10 w-full md:items-center md:justify-center antialiased bg-grid-black/[0.02]">
+      <div className="relative z-10 w-full md:items-center md:justify-center antialiased">
       <Navbar
         scrollToWebsiteDesign={scrollToWebsiteDesign}
         scrollToGraphicDesign={scrollToGraphicDesign}
@@ -73,8 +76,8 @@ export default function Home() {
         <motion.div
            initial={{ y: 20, opacity: 0 }}
            animate={{ y: 0, opacity: 1 }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-           className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black to-black/80 z-20 relative pointer-events-none font-bold tracking-tighter"
+           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+           className="text-5xl pb-5 md:text-8xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-black via-black/80 to-[#00AAE7]/50 z-20 relative pointer-events-none font-extrabold tracking-tighter"
         >
           Build Authority Online. <br /> Scale Revenue With Confidence.
         </motion.div>
@@ -94,7 +97,7 @@ export default function Home() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="flex items-center justify-center gap-4 flex-wrap my-6 z-20 relative pointer-events-auto"
+          className="flex items-center justify-center gap-6 flex-wrap my-10 z-20 relative pointer-events-auto"
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -102,9 +105,21 @@ export default function Home() {
           >
             <Link
               href="/contact"
-              className="cursor-pointer flex items-center justify-center border rounded-full px-8 py-3 text-white bg-gradient-to-r from-[#00AAE7] to-cyan-600 border-transparent font-bold tracking-tight shadow-lg shadow-cyan-500/20 hover:opacity-95 transition-all text-lg"
+              className="cursor-pointer flex items-center justify-center rounded-3xl px-10 py-4 text-white bg-gradient-to-r from-[#00AAE7] to-[#0088cc] font-bold tracking-tight shadow-[0_10px_30px_rgba(0,170,231,0.3)] hover:shadow-[0_15px_40px_rgba(0,170,231,0.4)] transition-all text-xl"
             >
               Start A Project
+            </Link>
+          </motion.div>
+        
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              href="/work"
+              className="cursor-pointer flex items-center justify-center rounded-3xl px-10 py-4 text-black bg-white border border-black/5 font-bold tracking-tight shadow-xl hover:bg-neutral-50 transition-all text-xl"
+            >
+              View Work
             </Link>
           </motion.div>
         </motion.div>

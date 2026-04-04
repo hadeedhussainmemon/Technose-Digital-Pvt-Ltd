@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import WhatsAppButton from "@/components/whatsapp-button";
 import BackToTop from "@/components/back-to-top";
+import Footer from "@/components/footer";
 
 import { Plus_Jakarta_Sans } from "next/font/google";
 
@@ -75,6 +76,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <Footer />
         <WhatsAppButton />
         <BackToTop />
       </body>
